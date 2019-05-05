@@ -10,7 +10,8 @@ import api from '../../services/api';
 import { MdInsertDriveFile } from 'react-icons/md';
 
 import logo from '../../assets/logo.svg';
-import './style.css';
+
+import { Container } from './styles';
 
 export default class box extends Component {
   state = { box: {} };
@@ -50,7 +51,7 @@ export default class box extends Component {
 
   render() {
     return (
-      <div id="box-container">
+      <Container>
         <header>
           <img src={logo} alt="" />
           <h1>{this.state.box.title}</h1>
@@ -88,7 +89,7 @@ export default class box extends Component {
               </li>
             ))}
         </ul>
-      </div>
+      </Container>
     );
   }
 }
